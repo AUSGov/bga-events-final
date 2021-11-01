@@ -1,0 +1,55 @@
+<head>
+  
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
+    <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+ 
+    <meta name="robots" content="noarchive, nofollow, noindex, nosnippet, notranslate, noydir">
+    
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,600i&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" type="image/x-icon" href={{"favicon.ico?" | relative_url }}>
+
+    <!-- Bootstrap -->
+    <!-- <link rel="stylesheet" href="{{ site.baseurl }}/css/client.min.css"> -->
+    <link rel="stylesheet" href={{ "css/bootstrap.min.css" | relative_url }}>
+
+    <!-- Prototype specific CSS -->
+    <link rel="stylesheet" href={{ "css/main.css" | relative_url }}>
+    
+    <!-- JavaScript -->
+       
+    <script src={{ "js/jquery-3.4.1.js" | relative_url }}></script>
+    
+    <script src={{ "js/bootstrap.bundle.min.js" | relative_url }}></script>
+    
+   
+    
+    <script src={{ "js/client.js" | relative_url }}></script>
+    
+    <script src={{ "js/checklist.js" | relative_url }}></script>
+    
+    <script src={{ "js/prototype.js" | relative_url }}></script>
+    
+    
+    <!--DATEPICKER -->
+    <!--<script src={{ "js/bootstrap-datepicker.js" | relative_url }}></script>-->
+    
+    <!--<script type="text/javascript" src="//cdn.jsdelivr.net/jquery/1/jquery.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>-->
+    <!--<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/bootstrap/3/css/bootstrap.css" />-->
+    
+    <!--<script type="text/javascript" src="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.js"></script>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.css" />-->
+    
+    
+ 
+    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+    <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
+    
+    
+
+</head>
+

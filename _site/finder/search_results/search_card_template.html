@@ -1,0 +1,63 @@
+<div class="search-card-result">
+
+    <div class="search-result-card search-card-content">
+        <div class="search-card-standard-content">
+            <div class="top-row">
+                <p class="search-card-content-type" aria-hidden="true">LABEL</p>
+
+                {% include shortlist_btn.html %}
+
+            </div>
+            <h5 class="search-card-heading"><a href={{ "/finder/grants-information/" | relative_url }}>TITLE</a></h5>
+            <p class="search-card-body">DESCRIPTION</p>
+        </div>
+        <div class="search-card-footer open">
+
+            <div class="status open">
+                <p>Open</p>
+            </div>
+            <div class="status coming-soon">
+                <p>Coming soon</p>
+            </div>
+            <div class="status closed">
+                <p>Closed</p>
+            </div>
+
+            <div class="deadline open">
+                <p><strong>Closing in</strong></p>
+            </div>
+
+            <div class="deadline coming-soon">
+                <p><strong>Opens in</strong></p>
+            </div>
+
+        </div>
+    </div>
+
+
+    <div class="search-accordion-expand-wrapper">
+        <div class="collapse" id="" style="">
+            <div class="card">
+                <div class="card-body">
+                    <div class="accordion-expand-contents">
+                        <div>
+                            <p class="accordion-grant-content-heading">Who is this for?</p>
+                            <p class="accordion-grant-content-description">WHO IT IS FOR</p>
+                        </div>
+                        <div>
+                            <p class="accordion-grant-content-heading">What you get?</p>
+                            <p class="accordion-grant-content-description">WHAT YOU GET</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><button aria-label="Who can apply - content expands above" class="grant-expand-title collapsed" data-toggle="collapse" aria-expanded="false">
+            <div class="accordion-title">
+                <p>Who can apply</p>
+                <svg width="16" height="16" class="">
+                    <path fill-rule="evenodd" d="M8 9.028L1.982 3 0 4.986 8 13l8-8.014L14.018 3z"></path>
+                </svg>
+            </div>
+        </button>
+    </div>
+</div>

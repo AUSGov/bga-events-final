@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% include head.html %}
+
+
+<body id="events-finder">
+    
+    <!--<div class="mobile-frame">
+    <img src={{ "/assets/mobile_iphone_X.png" | relative_url }}></div>-->
+
+
+    <!-- HEADER -->
+    {% include header.html %}
+
+    
+    <!-- BREADCRUMB -->
+    {% include breadcrumb.html %}
+    
+    <!-- TOOLS PAGE HEADER -->
+    {% include pageheader-events.html %}
+    
+    
+    <!-- RESULTS SECTION -->
+    <div class="results-section c-wrapper c-wrapper-bg-transparent container-fluid layout">
+    
+        
+    <div class="results-title-wrapper">
+        <div class="row">
+            <div class="col-12 col-lg-12 col-xl-12">
+                <div class="results-title">
+                    <h2 class="showing-results">Showing <span class="number">130</span> events</h2>
+                    <div class="mobile-button-wrapper">
+
+                        <button class="mobile-display view-filters mobile-show">
+                            <a>
+                                <p>Filter <span class="filter-counter">0</span></p>
+                            </a>
+                        </button>
+
+                        
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    
+    <div class="filter-and-results-wrapper">
+        <div class="row">
+            <div class="col-4">
+                <div class="filter-wrapper">
+
+                    <p class="modal-close desktop-hide">Close</p>
+                    <div class="filter-inner-wrapper">
+
+                        {% include events-filters.html %}
+
+                        <div class="mobile-apply-filters-button">
+                            <div class="standardcta-button-wrapper standardcta-inline-button-wrapper">
+                                <div>
+                                    <a class="theme-button theme-button-primary theme-button-small btn next">
+                                        <span>Apply filters</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="clear-filters">
+                            <a class="clear-all">
+                                Clear all filters<span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16.01" viewBox="0 0 16 16.01">
+                                        <path d="M4.01,4v7h7L7.792,7.782A5.919,5.919,0,0,1,12.015,6a6,6,0,1,1-5.654,8.005H4.28A8,8,0,1,0,6.361,6.351Z" transform="translate(-4.01 -4)" fill="#333" />
+                                    </svg>
+                                </span></a>
+                        </div>
+
+                         
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-8">
+
+                {% include events-results.html %}
+
+
+                <!-- PAGINATION -->
+                <div class="pagination-wrapper">
+                    <div class="pagination">
+                        <a href="" class="page active">1</a>
+                        <a href="" class="page">2</a>
+                        <a href="" class="page">3</a>
+                        <a href="" class="next">Next</a>
+                        <a href="" class="last">Last</a>
+                    </div>
+                </div>
+
+                <div class="page-number-wrapper">
+                    <div class="page-number">
+                        <p>Page 1 of 3</p>
+                    </div>
+
+                    <div class="select-number-results">
+                        <form class="">
+                            <label>Results per page:</label>
+                            <select id="number_of_results">
+                                <option value="10 results">10</option>
+                                <option value="25 results">25</option>
+                                <option value="50 results">50</option>
+                            </select>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+
+
+    </div>
+        
+
+    <!-- FOOTER -->
+    {% include footer.html %}
+    
+        
+    </div> 
+
+            
+        
+</body>
+
+</html>

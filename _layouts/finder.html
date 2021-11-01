@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% include head.html %}
+
+
+<body>
+    
+    <!--<div class="mobile-frame">
+    <img src={{ "/assets/mobile_iphone_X.png" | relative_url }}></div>-->
+    
+    <div class="">
+
+    <!-- HEADER -->
+    {% include header.html %}
+
+    
+    <!-- BREADCRUMB -->
+    {% include breadcrumb.html %}
+    
+    <!-- TOOLS PAGE HEADER -->
+    {% include pageheader-finder.html %}
+    
+    <!-- FINDER SECTION -->
+    {% include finder.html %}
+    
+    
+    
+    <!-- RESULTS SECTION -->
+    <div class="results-section c-wrapper c-wrapper-bg-transparent container-fluid layout">
+    <div class="results-title-wrapper">
+        <div class="row">
+        <div class="col-12 col-lg-12 col-xl-12">
+            <div class="results-title">
+                <h2 class="showing-results">Showing <span class="number">587</span> grants and programs</h2>
+                
+                <div class="mobile-button-wrapper">
+                
+                <button class="mobile-display view-filters mobile-show">
+                    <a><p>Filter <span class="filter-counter">0</span></p></a>
+                </button>
+                    
+                <button class="mobile-display mobile-show view-shortlist">
+                
+                <a class="theme-button theme-button-secondary theme-button-small btn">
+
+                    <svg class="remove-from-shortlist" xmlns="http://www.w3.org/2000/svg" width="27" height="25.998" viewBox="0 0 27 25.998">
+                    <path d="M27,9.907l-9.707-.848L13.5,0,9.707,9.072,0,9.907l7.371,6.472L5.157,26l8.343-5.1L21.843,26l-2.2-9.619Z" />
+                </svg>
+
+                <p>Shortlist <span class="shortlist-btn-counter">0</span></p>
+                </a>
+                </button>
+            </div>
+            </div>
+          
+        </div>
+    </div>
+    </div>
+    
+
+    <div class="filter-and-results-wrapper">
+     
+    <div class="row">
+    <div class="col-4">
+       <div class="filter-wrapper">
+
+        <p class="modal-close desktop-hide">Close</p>
+            <div class="filter-inner-wrapper">
+
+            {% include filters.html %}
+
+            <div class="mobile-apply-filters-button">
+                <div class="standardcta-button-wrapper standardcta-inline-button-wrapper">
+                    <div>
+                        <a class="theme-button theme-button-primary theme-button-small btn next">
+                            <span>Apply filters</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+                <div class="clear-filters">
+                <a class="clear-all">
+                    Clear all filters<span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16.01" viewBox="0 0 16 16.01">
+                            <path d="M4.01,4v7h7L7.792,7.782A5.919,5.919,0,0,1,12.015,6a6,6,0,1,1-5.654,8.005H4.28A8,8,0,1,0,6.361,6.351Z" transform="translate(-4.01 -4)" fill="#333" />
+                        </svg>
+                    </span></a>
+            </div>
+
+            <div class="name-search">
+                <h5>Filter grants and programs <span>by name</span></h5>
+
+                <div class="search-wrapper">
+                    <input type="search" placeholder="Enter grant name">
+                    <button class="name-search-btn">
+                        <svg width="20" height="20">
+                          <path fill-rule="evenodd" d="M15.27 12.815l-.409.409-1.706-1.706c2.052-2.838 1.802-6.836-.753-9.39A7.218 7.218 0 0 0 7.264 0a7.22 7.22 0 0 0-5.139 2.128c-2.833 2.833-2.833 7.443 0 10.276a7.22 7.22 0 0 0 5.139 2.128c1.549 0 3.023-.483 4.253-1.375l1.706 1.705-.41.41L17.543 20 20 17.543l-4.73-4.728zm-11.507-2.05a4.955 4.955 0 0 1 0-6.999 4.918 4.918 0 0 1 3.5-1.45c1.323 0 2.566.515 3.5 1.45a4.955 4.955 0 0 1 0 7 4.919 4.919 0 0 1-3.5 1.449 4.92 4.92 0 0 1-3.5-1.45z"></path>
+                        </svg>
+                    </button>
+                </div>
+                <div class="search-list-wrapper">
+                    <div class="search-list active">
+                        <ul id="searchbar-list" class="searchbar-list">
+                            <li>Modern <span>Manufacturing</span> Initiative – Manufacturing Integration Stream</li>
+                            <li>Modern <span>Manufacturing</span> Initiative – Manufacturing Collaboration Stream</li>
+                            <li><span>Manufacturing</span> Modernisation Fund Round 2 Grant Recipients</li>
+                            <li>Advanced <span>Manufacturing</span> Growth Fund grant recipients</li>
+                            <li>Funding opportunities available under the Modern <span>Manufacturing</span> Initiative</li>
+                            <li>Modern <span>Manufacturing</span> Initiative – Manufacturing Translation Stream grant recipients</li>
+                        </ul>
+                    </div>
+                </div>
+                <ul class="name-filter">
+                    <li filter-value="10" data-option="modern-manufacturing" class="select-option">modern manufacturing</li>
+                </ul>
+                
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <div class="col-12 col-md-8">
+
+        {% include search-results.html %}
+        
+        
+        <!-- PAGINATION -->   
+        <div class="pagination-wrapper">
+            <div class="pagination">     
+                <a href="" class="page active">1</a> 
+                <a href="" class="page">2</a> 
+                <a href="" class="page">3</a> 
+                <a href="" class="next">Next</a>
+                <a href="" class="last">Last</a>
+            </div>
+        </div>
+
+        <div class="page-number-wrapper">
+            <div class="page-number">
+                <p>Page 1 of 3</p>
+            </div>
+
+            <div class="select-number-results">
+                <form class="">
+                    <label>Results per page:</label>
+                    <select id="number_of_results">
+                        <option value="10 results">10</option>
+                        <option value="25 results">25</option>
+                        <option value="50 results">50</option>
+                    </select>
+                </form>
+            </div>
+        </div>
+
+        </div>
+    
+</div>
+
+
+    
+    
+    
+        </div>
+        
+
+    <!-- FOOTER -->
+    {% include footer.html %}
+    
+        
+    </div> <!--end filter-and-results-wrapper-->
+</body>
+
+</html>
