@@ -44,19 +44,19 @@ $(document).ready(function () {
     });
     $('#navbarDropdownMenuLink_2').on('click', function(e){
         e.preventDefault();
-        window.location.pathname = "/bga-events-finder-2/finder/tool.html";
+        window.location.pathname = "/bga-events-final/finder/tool.html";
     });
     $('#navbarDropdownMenuLink_3').on('click', function(e){
         e.preventDefault();
-        window.location.pathname = "/bga-events-finder-2/expertise-and-advice.html";
+        window.location.pathname = "/bga-events-final/expertise-and-advice.html";
     });
     $('#navbarDropdownMenuLink_4').on('click', function(e){
         e.preventDefault();
-        window.location.pathname = "/bga-events-finder-2/events/events-finder.html";
+        window.location.pathname = "/bga-events-final/events/events-finder.html";
     });
     $('#navbarDropdownMenuLink_5').on('click', function(e){
         e.preventDefault();
-        window.location.pathname = "/bga-events-finder-2/news.html";
+        window.location.pathname = "/bga-events-final/news.html";
     }); 
 
     // Mobile nav (for the moble test version only)
@@ -68,11 +68,11 @@ $(document).ready(function () {
     
     $('.mobile-test #navbarDropdownMenuLink_0').on('click', function(e){
         e.preventDefault();
-        window.location.pathname = "/bga-events-finder-2/registrations";     
+        window.location.pathname = "/bga-events-final/registrations";     
     });
     $('.mobile-test #navbarDropdownMenuLink_1').on('click', function(e){
         e.preventDefault();
-        window.location.pathname = "/bga-events-finder-2/planning";
+        window.location.pathname = "/bga-events-final/planning";
     });
     
     $('#ChangeToggle').on('click', function(){
@@ -452,7 +452,7 @@ $(document).ready(function () {
     }); 
     
     // On demand click disables date filter  
-    $('#event-type .checkbox-item').on('click', function(){
+    /*$('#event-type .checkbox-item').on('click', function(){
         //console.log('selected');
         
         if ( $('label[data-option="past-recorded-events"]').parents('.checkbox-item').hasClass('selected') ) {
@@ -492,7 +492,7 @@ $(document).ready(function () {
             $("#date").removeClass('hidden');
             $("#date").slideDown();
         }
-    });
+    });*/
     
     
     // Select filter text input options (postcode field)

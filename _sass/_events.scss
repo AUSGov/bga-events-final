@@ -590,19 +590,24 @@
             
             .search-card-header {
                 background: $blue-primary-mid;
-                padding: 24px 32px;
+                padding: 16px 24px;
                 display: flex;
                 justify-content: flex-start;
                 
                 .event-type-icon {
-                    margin: 8px 24px 0 0;
+                    margin: 0 16px 0 0;
+                    
+                    svg {
+                        width: 26px;
+                    }
+                    
                 }
 
                 h3 {
-                    font-size: 24px;
+                    font-size: 18px;
                     margin: 0;
                     color: $white;
-                    padding: 0 0 8px 0;
+                    padding: 0 0 0;
                 }
                 .date {
                     display: flex;
@@ -625,7 +630,7 @@
                 }  
             }    
             .search-card-content {
-                padding: 32px;
+                padding: 24px;
                 background-color: $blue-lightest;
                 
             .search-card-heading {
@@ -636,26 +641,28 @@
                 margin: 0;
                 padding: 0 0 16px 0; 
             }
-            p, li {
-                font-size: 16px;
+            p {
+                font-size: 14px;
                 line-height: 1.71;
                 color: #333;
                 padding-bottom: 16px;
+                
+                &.description {
+                    background: $white;
+                    padding: 16px;
+                }
             }
-            .event-details {
+            .date-time {
                     padding: 0;
-                    margin: 0 0 16px 0;
+                    margin: 0 0 4px 0;
 
                     li {
-                        list-style-type: none;
-                        margin-left: 80px;
-                        margin-bottom: 8px;
-                        padding: 0;
-
-                        strong {
-                            display: inline-block;
-                            text-indent: -80px;
-                        }
+                        display: inline;
+                        text-decoration: none;
+                        @include font-format($font-family, $font-semibold, normal);
+                        padding: 0 24px 0 0;
+                        font-size: 16px;
+                        line-height: 28px;
 
                         &:before {
                             display: none;
@@ -666,23 +673,50 @@
                         }
                     }
 
+            }
+                .location-cost {
+                    padding: 0;
+                    margin-bottom: 16px;
+                    
+                    li {
+                        list-style-type: none;
+                        padding: 0 24px 0 0;
+                        display: inline;
+                        font-size: 14px;
+                        line-height: 1.71;
+
+                        strong {
+                            display: inline;
+                        }
+                         &:before {
+                            display: none;
+                        }
+
+                        &:last-of-type {
+                            padding: 0;
+                        } 
+                    }
                 }
                 
             .accordion.event-information {
-                margin-bottom: 16px;
+                margin-bottom: 24px;
+                
                 
                 .accordion-item {
+                    
                     .accordion-header {
                         padding: 0;
-
+                        background: $white;
+                        padding: 0 0 16px 16px;
+                        //read more
                         button {
-                            background: $white url(../assets/Icon-chevron-down-blue.svg) no-repeat;
+                            background: url(../assets/Icon-chevron-down-blue.svg) no-repeat;
                             background-size: 16px 10px;
                             background-position: center right 16px;
                             border: 2px solid $tool-teal;
                             border: none;
                             cursor: pointer;
-                            padding: 8px 40px 8px 16px;
+                            padding: 0 40px 0 0;
                             color: $blue-primary-mid;
                             @include font-format($font-family, $font-semibold, normal);
                             letter-spacing: 0.03rem;
@@ -695,12 +729,41 @@
                     }
                     .accordion-body {
                         background: $white;
-                        padding: 16px;
+                        padding: 0 16px 16px 16px;
                         display: none;
-
-                        li {
-                            margin-left: 16px;
+                        
+                        ul {
+                            padding: 0 0 0 32px;
                         }
+                        p, li {
+                            font-size: 14px;
+                        }
+                        
+                        .event-details {
+                            border-top: 3px solid #D8D8D8;
+                            border-bottom: 3px solid #D8D8D8;
+                            padding: 16px 0;
+                            margin-bottom: 16px;
+                            
+                            li {
+                                display: flex;
+                                list-style-type: none;
+                                margin: 0 0 8px 0;
+                                padding: 0;
+                                font-size: 14px;
+                                
+                                &:last-of-type {
+                                    margin: 0;
+                                }
+
+                                strong {
+                                    display: inline-block;
+                                    width: 130px;
+                                    min-width: 130px;
+                                }
+                            }
+                        }
+                        
                     }
 
                     &.open {
@@ -708,14 +771,17 @@
                         border:none;
                         
                         .accordion-header {
+                            // read more
                             button {
                                 background: $white url(../assets/Icon-chevron-up-blue.svg) no-repeat;
                                 background-size: 16px 10px;
                                 background-position: center right 16px;
                             }
                         }
-                        .accordion-body {
-                            button {
+                        
+                        .accordion-body {                            
+                            //close
+                            button  {
                                 background: none;
                                 border: none;
                                 padding: 0;
@@ -724,6 +790,7 @@
                                 cursor: pointer;
                                 display: flex;
                                 align-items: center;
+                                font-size: 14px;
                                 
                                 svg {
                                     margin-right: 8px;
@@ -741,89 +808,111 @@
                 }
                 
             }
-            
-            .primary-button {
-                border-radius: 6px;
-                padding: 8px 16px;
-                text-align: center;
-                font-size: 16px;
-                font-style: normal;
-                font-weight: 600;
-                font-family: "Open Sans", sans-serif;
-                line-height: 24px;
-                box-shadow: 0 .125rem .375rem 0 rgba(0, 0, 0, .1);
-                display: inline-flex;
+            // register
+            .register {
+                
+                display: flex;
                 align-items: center;
-                justify-content: center;
-                border: solid 2px #254f90;
-                background-color: #4569a0;
-                color: #ffffff;
-                font-family: "Open Sans", sans-serif;
-                text-decoration: none;
-                width: 190px;
-                position: relative;
-
-                &:hover,
-                &:focus {
-                    cursor: pointer;
-                    border: 2px solid #18335c;
-                    background: #254f90;
-                    box-shadow: 0 .125rem .375rem 0 rgba(0, 0, 0, .3);
-                    outline: none;
-                }
-                &:active {
-                    background-color: #18335c;
-                    border: solid 2px #18335c;
-                    color: #ffffff;
-                }
-
-                .svg-container {
-                    display: flex;
+                
+                .primary-button {
+                    border-radius: 6px;
+                    padding: 8px 32px;
+                    margin-right: 16px;
+                    min-width: 164px;
+                    text-align: center;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 600;
+                    font-family: "Open Sans", sans-serif;
+                    line-height: 24px;
+                    box-shadow: 0 .125rem .375rem 0 rgba(0, 0, 0, .1);
+                    display: inline-flex;
                     align-items: center;
                     justify-content: center;
-                    margin-left: 16px;
-                    width: 16px;
-                    height: 16px;
+                    border: solid 2px #254f90;
+                    background-color: #4569a0;
+                    color: #ffffff;
+                    font-family: "Open Sans", sans-serif;
+                    text-decoration: none;
+                    position: relative;
 
-                    svg {
-                        fill: #fff;
+                    &:hover,
+                    &:focus {
+                        cursor: pointer;
+                        border: 2px solid #18335c;
+                        background: #254f90;
+                        box-shadow: 0 .125rem .375rem 0 rgba(0, 0, 0, .3);
+                        outline: none;
                     }
-                }
-                span {
-                    position: absolute;
-                    left: -9000px;
-                    width: 0;
-                    overflow: hidden; 
-                }
-                &:hover, &:focus, &:active {
-                    .popover {
-                        background: $white;
-                        color: $black-light;
-                        @include font-format($font-family, $font-semibold, normal);
-                        padding: 8px;
-                        border-radius: 6px;
-                        display: block;
-                        position: absolute;
-                        top: -48px; 
-                        left: 0.5rem; 
-                        width: 12em;
-                        border: 2px solid $blue-primary;
-                        z-index: 800;
+
+                    &:active {
+                        background-color: #18335c;
+                        border: solid 2px #18335c;
+                        color: #ffffff;
                     }
-                    .arrow {
-                        background-color: $white; 
-                        border-bottom: 2px solid $blue-primary; 
-                        border-right: 2px solid $blue-primary; 
-                        bottom: -16px; 
-                        height: 16px; 
+
+                    .svg-container {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        margin-left: 16px;
                         width: 16px;
-                        position: absolute; 
-                        top: -8px;
-                        left: 6rem;
-                        transform: translate(-50%, -50%) rotate(45deg); 
-                        z-index: 900;
+                        height: 16px;
+
+                        svg {
+                            fill: #fff;
+                        }
+                    }
+
+                    span {
+                        position: absolute;
+                        left: -9000px;
+                        width: 0;
+                        overflow: hidden;
+                    }
+
+                    &:hover,
+                    &:focus,
+                    &:active {
+                        .popover {
+                            background: $white;
+                            color: $black-light;
+                            @include font-format($font-family, $font-semibold, normal);
+                            padding: 8px;
+                            border-radius: 6px;
+                            display: block;
+                            position: absolute;
+                            top: -48px;
+                            left: 0.5rem;
+                            width: 12em;
+                            border: 2px solid $blue-primary;
+                            z-index: 800;
+                        }
+
+                        .arrow {
+                            background-color: $white;
+                            border-bottom: 2px solid $blue-primary;
+                            border-right: 2px solid $blue-primary;
+                            bottom: -16px;
+                            height: 16px;
+                            width: 16px;
+                            position: absolute;
+                            top: -8px;
+                            left: 6rem;
+                            transform: translate(-50%, -50%) rotate(45deg);
+                            z-index: 900;
+                        }
                     }
                 }
+                
+                p {
+                    @include font-format($font-family, $font-semibold, normal);
+                    font-size: 16px;
+                    line-height: 22px;
+                    margin: 0;
+                    padding: 0;
+                }
+
             }
 
             }
