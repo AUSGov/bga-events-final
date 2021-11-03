@@ -381,8 +381,7 @@ $(document).ready(function () {
         //task_result_display(subcategory_filters, "#search-result-Z");
         
     });
-
-    
+  
     // Select filter checkbox options
     $('.checkbox-item label').on('click', function(){
         var filter_option = $(this).attr('data-option');
@@ -470,17 +469,29 @@ $(document).ready(function () {
         $('.filter-item-content').hide();
         $('.filter-item-title').removeClass('open');
         
+        // Set size of scrolling panel
+        var bottom_height = $('.mobile-bottom').height(),
+            modal_height = $('.filter-wrapper').height(),
+            filters_height = modal_height - bottom_height - 59;
+        
+        console.log(bottom_height);
+        console.log(modal_height);
+        
+        $('.filters').height(filters_height);
+        
     });
     $('.filter-wrapper .modal-close').on('click', function(){
         set_total_filter_count();
         $('.filter-wrapper').removeClass('active');
         $('.modal-background').removeClass('active');
+        $('.filters').css('height', 'auto');
         
     });
     $('.mobile-apply-filters-button').on('click', function(){
         set_total_filter_count();
         $('.filter-wrapper').removeClass('active');
         $('.modal-background').removeClass('active');
+        $('.filters').css('height', 'auto');
     });
     
  
@@ -620,6 +631,8 @@ $(document).ready(function () {
         $(this).parents('.accordion-item').toggleClass('open');
         $(this).parents('.accordion-item').find('.accordion-body').slideToggle();
     });
+    
+   
 
     
     
