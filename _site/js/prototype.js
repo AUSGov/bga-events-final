@@ -473,10 +473,7 @@ $(document).ready(function () {
         var bottom_height = $('.mobile-bottom').height(),
             modal_height = $('.filter-wrapper').height(),
             filters_height = modal_height - bottom_height - 59;
-        
-        console.log(bottom_height);
-        console.log(modal_height);
-        
+    
         $('.filters').height(filters_height);
         
     });
