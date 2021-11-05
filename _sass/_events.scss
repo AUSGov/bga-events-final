@@ -923,6 +923,8 @@
                 
                 display: flex;
                 align-items: center;
+                flex-direction: row-reverse;
+                justify-content: flex-end;
                 
                 .primary-button {
                     border-radius: 6px;
@@ -1157,8 +1159,11 @@
                         display: block;
                         
                         .primary-button {
-                            margin: 0 0 16px 0;
+                            margin: 0 0 0;
                             width: 100%;
+                        }
+                        p {
+                            margin-bottom: 16px;
                         }
                     }
                 }
