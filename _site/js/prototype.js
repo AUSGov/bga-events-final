@@ -624,9 +624,15 @@ $(document).ready(function () {
     
     // READ MORE ACCORDIONS
     $('.accordion.event-information .accordion-item button').on('click', function(){
-        //console.log($(this));
+        
         $(this).parents('.accordion-item').toggleClass('open');
         $(this).parents('.accordion-item').find('.accordion-body').slideToggle();
+        
+        if ($(this).parents('.accordion-item').hasClass('open')) {
+            $(this).text('Read less');
+        } else {
+            $(this).text('Read more');
+        }
     });
     
    
