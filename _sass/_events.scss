@@ -1688,6 +1688,249 @@
         padding: 0;
     }
 }
+    ul.event-info {
+        padding: 0;
+        margin: 0 0 32px 0;
+            
+        li {
+            list-style-type: none;
+            //margin-left: 140px;
+            list-style-type: none;
+
+            strong {
+                display: block;
+                //text-indent: -140px;
+            }
+            .maps-link {
+                white-space: nowrap;
+            }
+
+            &:before {
+                display: none;
+            }
+            &:last-of-type {
+                padding: 0;
+            }
+        }
+    }
+.events-callout {
+    background: #E5EDF7;
+    padding: 0;
+    margin-bottom: 32px;
+    border-top: #B3C1D7 solid 4px;
+    
+    h2 {
+        padding-top: 0;
+    }
+    .events-content {
+        padding: 32px;
+
+        .event-details, ul {
+            padding: 0;
+            margin: 0;
+            
+            li {
+                list-style-type: none;
+                margin-left: 80px;
+                padding-left: 0;
+                
+                strong {
+                    display: inline-block;
+                    text-indent: -80px;
+                }
+                
+                
+                &:before {
+                    display: none;
+                }
+                &:last-of-type {
+                    padding: 0;
+                }
+            }
+            
+        }
+        .event-details {
+            margin-bottom: 24px;
+        }
+    }
+    
+    #sessions.accordion {
+        border-top: 1px solid $black-light;
+        margin-top: 8px;
+        
+        .accordion-item {
+            border-bottom: 1px solid $black-light;
+
+            .accordion-header {
+                margin: 0;
+                padding: 0 16px !important;
+                background: url(../assets/chevron-down-black.svg) no-repeat;
+                background-position: right 16px center;
+
+                button {
+                    background: none;
+                    width: 100%;
+                    font-size: 16px;
+                    font-weight: 600;
+                    text-align: left;
+                    padding: 16px 32px 16px 0;
+                    border: none;
+                    
+                    &:focus {
+                        outline: none;
+                    }
+                }
+            }
+
+            .accordion-body {
+                display: none;
+                padding: 0 16px 16px 16px;
+            }
+            
+            &.open {
+                background: $white;
+                
+                .accordion-header {
+                    background: url(../assets/chevron-up-black.svg) no-repeat; 
+                    background-position: right 16px center;
+                    
+                    button {
+                        padding: 16px 32px 16px 0;
+                    }
+                }   
+            }
+        }
+    }
+    
+    .register-link {
+        background: #C6D2E3;
+        padding: 32px;
+        
+        h3 {
+            padding-top: 0 !important;
+        }
+    
+        select {
+            width: calc(100% - 204px);
+            height: 44px;
+            border: solid 1px $black-light;
+            padding: 0 16px;
+            margin-right: 8px;
+            -o-appearance: none;
+            -ms-appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            background: $white url(../assets/Icon-chevron-down-333333.svg) no-repeat;
+            background-position: right 16px center;
+            background-size: 16px 10px;
+        }
+        .primary-button {
+            border-radius: 6px;
+            padding: 8px 16px;
+            text-align: center;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 600;
+            font-family: "Open Sans", sans-serif;
+            line-height: 24px;
+            box-shadow: 0 .125rem .375rem 0 rgba(0, 0, 0, .1);
+            transition-duration: 0.4s, 0.4s;
+            transition-timing-function: ease, ease;
+            transition-delay: 0s, 0s;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border: solid 2px #254f90;
+            background-color: #4569a0;
+            color: #ffffff;
+            font-family: "Open Sans", sans-serif;
+            text-decoration: none;
+            width: 190px;
+            
+            &:after {
+                display: none !important;
+            }
+        }
+        .primary-button:hover,
+        .primary-button:focus {
+            cursor: pointer;
+            border: 2px solid #18335c;
+            background: #254f90;
+            box-shadow: 0 .125rem .375rem 0 rgba(0, 0, 0, .3);
+            outline: none;
+        }
+        .primary-button:hover {
+            transform: translateY(-3px);
+        }
+        .primary-button:active {
+            background-color: #18335c;
+            border: solid 2px #18335c;
+            transition: box-shadow 0.1s ease, transform 0.1s ease;
+            transform: translate(0, -2px);
+            color: #ffffff;
+        }
+        .primary-button .svg-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+           margin-left: 16px;
+            width: 16px;
+            height: 16px;
+        }
+        .primary-button .svg-container svg {
+            fill: #fff;
+        }
+        .primary-button.primary-button-light .svg-container svg {
+            fill: #254f90;
+        }
+        .primary-button.primary-button-light:hover .svg-container svg,
+        .primary-button.primary-button-light:focus .svg-container svg {
+            transition-duration: 0.4s, 0.4s;
+            transition-timing-function: ease, ease;
+            transition-delay: 0s, 0s;
+            fill: #fff;
+        }
+    } 
+
+    @media(max-width: 576px) {
+        .events-content {
+            padding: 24px;
+            
+            .event-details, ul {
+                
+                li {
+                    margin-left: 0;
+                    
+                    strong {
+                        text-indent: 0;
+                        display: inline-block;
+                    }
+                }
+            }
+        }
+        
+        #sessions.accordion {
+            .accordion-item {
+                .accordion-header {
+                    padding: 0 8px !important;
+                    background-position: reight 8px center;
+                }
+            }
+        }
+        
+        .register-link {
+            select {
+                width: 100%;
+                margin-bottom: 16px;
+            }
+            .primary-button {
+                width: 100%;
+            }
+        }
+    }
+}
+
 
 #information-video  {
     img {

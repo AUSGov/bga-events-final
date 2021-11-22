@@ -635,6 +635,15 @@ $(document).ready(function () {
         }
     });
     
+    
+    // SESSIONS ACCORDIONS
+    $('#sessions.accordion .accordion-item button').on('click', function(){
+        
+        $(this).parents('.accordion-item').toggleClass('open');
+        $(this).parents('.accordion-item').find('.accordion-body').slideToggle();
+    });
+    
+    
    
 
     
