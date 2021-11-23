@@ -1815,7 +1815,7 @@
     
         select {
             width: calc(100% - 204px);
-            height: 44px;
+            height: 48px;
             border: solid 1px $black-light;
             padding: 0 16px;
             margin-right: 8px;
@@ -1850,6 +1850,7 @@
             font-family: "Open Sans", sans-serif;
             text-decoration: none;
             width: 190px;
+            height: 48px;
             
             &:after {
                 display: none !important;
