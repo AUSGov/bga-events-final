@@ -1807,6 +1807,9 @@
         h3 {
             padding-top: 0 !important;
         }
+        form label {
+            @include font-format($font-family, $font-regular, normal);
+        }
     
         select {
             width: calc(100% - 204px);
