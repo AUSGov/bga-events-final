@@ -4634,9 +4634,7 @@ ul.event-info li:last-of-type { padding: 0; }
 
 .events-callout .events-content .event-details li:last-of-type, .events-callout .events-content ul li:last-of-type { padding: 0; }
 
-.events-callout .events-content .event-details { margin-bottom: 24px; }
-
-.events-callout #sessions.accordion { border-top: 1px solid #333333; margin-top: 8px; }
+.events-callout #sessions.accordion { border-top: 1px solid #333333; margin-top: 32px; }
 
 .events-callout #sessions.accordion .accordion-item { border-bottom: 1px solid #333333; }
 
