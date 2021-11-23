@@ -1809,6 +1809,8 @@
         }
         form label {
             @include font-format($font-family, $font-regular, normal);
+            margin: 0;
+            padding: 0 0 16px 0;
         }
     
         select {

@@ -4656,7 +4656,7 @@ ul.event-info li:last-of-type { padding: 0; }
 
 .events-callout .register-link h3 { padding-top: 0 !important; }
 
-.events-callout .register-link form label { font-family: "Open Sans", sans-serif; font-weight: 400; font-style: normal; }
+.events-callout .register-link form label { font-family: "Open Sans", sans-serif; font-weight: 400; font-style: normal; margin: 0; padding: 0 0 16px 0; }
 
 .events-callout .register-link select { width: calc(100% - 204px); height: 44px; border: solid 1px #333333; padding: 0 16px; margin-right: 8px; -o-appearance: none; -ms-appearance: none; -webkit-appearance: none; -moz-appearance: none; appearance: none; background: #ffffff url(../assets/Icon-chevron-down-333333.svg) no-repeat; background-position: right 16px center; background-size: 16px 10px; }
 
