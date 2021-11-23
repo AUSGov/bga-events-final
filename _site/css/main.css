@@ -4618,7 +4618,7 @@ ul.event-info li:before { display: none; }
 
 ul.event-info li:last-of-type { padding: 0; }
 
-.events-callout { background: #E5EDF7; padding: 0; margin-bottom: 32px; border-top: #B3C1D7 solid 4px; }
+.events-callout { background: #E5EDF7; padding: 0; margin-bottom: 0px; border-top: #B3C1D7 solid 4px; }
 
 .events-callout h2 { padding-top: 0; }
 
@@ -4678,7 +4678,7 @@ ul.event-info li:last-of-type { padding: 0; }
 
 .events-callout .register-link .primary-button.primary-button-light:hover .svg-container svg, .events-callout .register-link .primary-button.primary-button-light:focus .svg-container svg { transition-duration: 0.4s, 0.4s; transition-timing-function: ease, ease; transition-delay: 0s, 0s; fill: #fff; }
 
-@media (max-width: 576px) { .events-callout .events-content { padding: 24px; } .events-callout .events-content .event-details li, .events-callout .events-content ul li { margin-left: 0; } .events-callout .events-content .event-details li strong, .events-callout .events-content ul li strong { text-indent: 0; display: inline-block; } .events-callout #sessions.accordion .accordion-item .accordion-header { padding: 0 8px !important; background-position: reight 8px center; } .events-callout .register-link select { width: 100%; margin-bottom: 16px; } .events-callout .register-link .primary-button { width: 100%; } }
+@media (max-width: 576px) { .events-callout .events-content { padding: 24px; } .events-callout .events-content .event-details li, .events-callout .events-content ul li { margin-left: 0; } .events-callout .events-content .event-details li strong, .events-callout .events-content ul li strong { text-indent: 0; display: inline-block; } .events-callout #sessions.accordion .accordion-item .accordion-header { padding: 0 8px !important; background-position: right 8px center; } .events-callout #sessions.accordion .accordion-item .accordion-body { padding: 0 8px 16px 8px; } .events-callout #sessions.accordion .accordion-item.open { background: #ffffff; } .events-callout #sessions.accordion .accordion-item.open .accordion-header { background-position: right 8px center; } .events-callout .register-link { padding: 24px; } .events-callout .register-link select { width: 100%; margin-bottom: 16px; } .events-callout .register-link .primary-button { width: 100%; } }
 
 #information-video img { width: 100%; max-width: 100%; }
 

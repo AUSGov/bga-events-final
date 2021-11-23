@@ -1716,7 +1716,7 @@
 .events-callout {
     background: #E5EDF7;
     padding: 0;
-    margin-bottom: 32px;
+    margin-bottom: 0px;
     border-top: #B3C1D7 solid 4px;
     
     h2 {
@@ -1917,12 +1917,24 @@
             .accordion-item {
                 .accordion-header {
                     padding: 0 8px !important;
-                    background-position: reight 8px center;
+                    background-position: right 8px center;
+                }
+                .accordion-body {  
+                    padding: 0 8px 16px 8px;
+                }
+                &.open {
+                    background: $white;
+
+                    .accordion-header {
+                        background-position: right 8px center;
+                    }
+                    
                 }
             }
         }
         
         .register-link {
+            padding: 24px;
             select {
                 width: 100%;
                 margin-bottom: 16px;
