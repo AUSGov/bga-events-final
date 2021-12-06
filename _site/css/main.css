@@ -4219,7 +4219,7 @@ html { overflow: -moz-scrollbars-vertical; overflow-y: scroll; }
 
 @media (max-width: 768px) { #events-finder .page-header-theme-tool .header-image-wrapper img { display: none; } }
 
-@media (max-width: 576px) { #events-finder .page-header-theme-tool { padding: 32px 15px 32px !important; } }
+@media (max-width: 576px) { #events-finder .page-header-theme-tool { padding: 32px 15px 48px !important; } #events-finder .page-header-theme-tool p { font-size: 16px; } }
 
 #events-finder .top-of-page { padding-top: 0; }
 
