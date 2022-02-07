@@ -4618,7 +4618,7 @@ ul.event-info li:before { display: none; }
 
 ul.event-info li:last-of-type { padding: 0; }
 
-.events-callout { background: #E5EDF7; padding: 0; margin-bottom: 0px; border-top: #B3C1D7 solid 4px; }
+.events-callout { background: #E5EDF7; padding: 0; margin-bottom: 0px; border-top: #B3C2D8 solid 4px; }
 
 .events-callout h2 { padding-top: 0; }
 
@@ -4652,7 +4652,7 @@ ul.event-info li:last-of-type { padding: 0; }
 
 .events-callout #sessions.accordion .accordion-item.open .accordion-header button { padding: 16px 32px 16px 0; }
 
-.events-callout .register-link { background: #C6D2E3; padding: 32px; }
+.events-callout .register-link { background: #B3C2D8; padding: 32px; }
 
 .events-callout .register-link h3 { padding-top: 0 !important; }
 

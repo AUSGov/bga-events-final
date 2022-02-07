@@ -1720,7 +1720,7 @@
     background: #E5EDF7;
     padding: 0;
     margin-bottom: 0px;
-    border-top: #B3C1D7 solid 4px;
+    border-top: $blue-primary-light solid 4px;
     
     h2 {
         padding-top: 0;
@@ -1804,7 +1804,7 @@
     }
     
     .register-link {
-        background: #C6D2E3;
+        background: $blue-primary-light;
         padding: 32px;
         
         h3 {
