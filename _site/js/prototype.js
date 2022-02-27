@@ -623,7 +623,18 @@ $(document).ready(function () {
     
     
     // READ MORE ACCORDIONS
-    $('.accordion.event-information .accordion-item button').on('click', function(){
+    $('.accordion.event-information .accordion-item button.close-item').on('click', function(){
+        
+        $(this).parents('.accordion-item').toggleClass('open');
+        $(this).parents('.accordion-item').find('.accordion-body').slideToggle();
+        
+        if ($(this).parents('.accordion-item').hasClass('open')) {
+            $(this).parents('.accordion-item').find('.read-more').text('Read less');
+        } else {
+            $(this).parents('.accordion-item').find('.read-more').text('Read more');
+        }
+    });
+    $('.accordion.event-information .accordion-item button.read-more').on('click', function(){
         
         $(this).parents('.accordion-item').toggleClass('open');
         $(this).parents('.accordion-item').find('.accordion-body').slideToggle();
