@@ -1150,10 +1150,15 @@
                             
                             &.open {
                                 .accordion-body {                            
+                                    
+                                    border-bottom: $blue-primary-mid solid 2px;
+                                    margin-bottom: 16px;
+                                    
                                     //close
                                     button {
                                         margin-bottom: 16px;
                                     }
+                                    
                                 }
                             }
                         }
